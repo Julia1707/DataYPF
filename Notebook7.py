@@ -46,8 +46,6 @@ ultimas_filas = expvida.tail(10)
 print(ultimas_filas)
 print("] ")
 
-
-
 print("Ejercicio 8: [")
 # Tipo de datos en cada columna de expvida
 tipos_de_datos = expvida.dtypes
@@ -83,8 +81,14 @@ print(f"El máximo porcentaje de datos faltantes es: {porcentaje_faltantes:.2f}%
 print("El máximo porcentaje de datos faltantes es: {:.2f}%".format(porcentaje_faltantes))
 
 #Usando template class 
-template = Template("El máximo porcentaje de datos faltantes es: {:.2f}%")
-print(template.substitute(porcentaje_faltantes=porcentaje_faltantes))
+
+# Formatear la cadena antes de pasarla a Template
+cadena_formateada = "El máximo porcentaje de datos faltantes es: {:.2f}%".format(porcentaje_faltantes)
+
+# Crear un objeto Template y luego sustituir los marcadores de posición
+template = Template(cadena_formateada)
+print(template.substitute())
+
 
 print("] ")
 
