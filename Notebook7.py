@@ -75,15 +75,15 @@ porcentaje_faltantes = (masnan / cantidad_total_filas) * 100
 
 # Imprimo el maximo porcentaje de datos faltantes. Uso f-strings.
 # Usando f-strings
-print(f"El máximo porcentaje de datos faltantes es: {porcentaje_faltantes:.2f}%")
+print(f"El máximo porcentaje de datos faltantes es (usando f-strings): {porcentaje_faltantes:.2f}%")
 
 # Usando str.format()
-print("El máximo porcentaje de datos faltantes es: {:.2f}%".format(porcentaje_faltantes))
+print("El máximo porcentaje de datos faltantes es (usando str.format): {:.2f}%".format(porcentaje_faltantes))
 
 #Usando template class 
 
 # Formatear la cadena antes de pasarla a Template
-cadena_formateada = "El máximo porcentaje de datos faltantes es: {:.2f}%".format(porcentaje_faltantes)
+cadena_formateada = "El máximo porcentaje de datos faltantes es (usando template): {:.2f}%".format(porcentaje_faltantes)
 
 # Crear un objeto Template y luego sustituir los marcadores de posición
 template = Template(cadena_formateada)
